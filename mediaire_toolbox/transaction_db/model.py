@@ -246,6 +246,7 @@ class User(Base):
     id = Column(Integer, Sequence('id'), primary_key=True)
     # user name
     name = Column(String(255), unique=True)
+    email = Column(String(255), unique=True)
     hashed_password = Column(String(128))
     # Datetime the user was added
     added = Column(
